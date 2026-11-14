@@ -1,14 +1,186 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Speedrun Stats</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel = "stylesheet" href = "mainStyle.css">
+    <script src = "mainJS.js" defer></script>
   </head>
+  
   <body>
-    <script src="index.js"></script>
-    <p>egg</p>
+    <div id = "pageContainer">
+
+      <div id = "sidebar">
+        
+        <div id = 'o1' class = 'optionButton' onclick = 'recordBreaks();'>
+          <p>Most Frequent Record Breaks</p>
+        </div>
+
+        <div id = 'o2' class = 'optionButton' onclick = 'lowCompetition();'>
+          <p>Lowest Competition</p>
+        </div>
+
+        <div id = 'o3' class = 'optionButton' onclick = 'delinedPopularity();'>
+          <p>Biggest Popularity Decline</p>
+        </div>
+
+        <div id = 'o4' class = 'optionButton' onclick = 'suddenSpring();'>
+          <p>Quickest Leap from Obscurity</p>
+        </div>
+
+        <div id = 'o5' class = 'optionButton' onclick = 'mostRecords();'>
+          <p>Most Records (Total)</p>
+        </div>
+
+        <div id = 'o6' class = 'optionButton' onclick = 'mostRecordsBroken();'>
+          <p>Most Records Broken</p>
+        </div>
+
+        <div id = 'o7' class = 'optionButton' onclick = 'mostLeaderboards();'>
+          <p>Most Held Positions</p>
+        </div>
+
+        <div id = 'o8' class = 'optionButton' onclick = 'mostSubmitted();'>
+          <p>Most Runs Submitted</p>
+        </div>
+
+        <div id = 'o9' class = 'optionButton' onclick = 'longestUnbroken();'>
+          <p>Longest Unbroken Records</p>
+        </div>
+
+        <div id = 'o10' class = 'optionButton' onclick = 'bad();'>
+          <p>Worst Runs</p>
+        </div>
+
+        <div id = 'o11' class = 'optionButton' onclick = 'totalTime();'>
+          <p>Total Time for Category</p>
+        </div>
+
+      </div>
+
+      <div id = "mainDiv">
+
+        <div id = "mainDivTop">
+          <p id = 'title'>Speedrun Records and Whatnot</p>
+        </div>
+
+        <div id = "mainDivBottom">
+          
+          <div id = 'secondDivTop' class = 'gameSections'>
+
+            <div id = 'gameOne' class = 'gameBox'>
+
+              <img id = 'imgOne' src = "https://www.speedrun.com/static/game/o1y9j9v6/cover.png?v=9003452">
+
+              <h2 id = 'headOne'>Celeste</h2>
+
+              <p id = 'contentOne'>Celeste is a wonderful platformer that demonstrates the universal truth: all trans women deserve airdashes.</p>
+            
+            </div>
+
+            <div id = 'gameTwo' class = 'gameBox'>
+              
+              <img id = 'imgTwo' src = "https://www.speedrun.com/static/game/76rqmld8/cover.png?v=a2d917a">
+
+              <h2 id = 'headTwo'>Hollow Knight</h2>
+
+              <p id = 'contentTwo'>In Hollow Knight, you are a little goober bug that goes to fight the sun.</p>
+
+            </div>
+
+            <div id = 'gameThree' class = 'gameBox'>
+              
+              <img id = 'imgThree' src = "https://www.speedrun.com/static/game/y65r7g81/cover.jpg?v=07cf3f1">
+
+              <h2 id = 'headThree'>Hollow Knight: Silksong</h2>
+
+              <p id = 'contentThree'>Silksong is the journey of a very very very scary spider.</p>
+              
+            </div>
+
+            <div id = 'gameFour' class = 'gameBox'>
+              
+              <img id = 'imgFour' src = "https://www.speedrun.com/static/game/yd4on3g1/cover.png?v=9cb4e01">
+
+              <h2 id = 'headFour'>Noita</h2>
+
+              <p id = 'contentFour'>Noita always ends in death.</p>
+
+            </div>
+
+          </div>
+
+          <div id = 'secondDivBottom' class = 'gameSections'>
+            
+            <div id = 'gameFive' class = 'gameBox'>
+              
+              <img id = 'imgFive' src = "https://www.speedrun.com/static/game/kdk4e21m/cover.jpg?v=0ad60da">
+              
+              <h2 id = 'headFive'>Terraria</h2>
+
+              <p id = 'contentFive'>Terraria is a wonderful game about destroying eldritch beings with weird rocks you found.</p>
+            
+            </div>
+
+            <div id = 'gameSix' class = 'gameBox'>
+              
+              <img id = 'imgSix' src = "https://calamitymod.wiki.gg/images/Site-logo.png?5b3cff">
+
+              <h2 id = 'headSix'>Calamity Mod</h2>
+
+              <p id = 'contentSix'>On this day I am become Terrarian, death, slayer of Moons, extinguisher of Suns, devourer of Devourers, burner of Witches.</p>
+
+            </div>
+
+            <div id = 'gameSeven' class = 'gameBox'>
+              
+              <img id = 'imgSeven' src = "https://www.speedrun.com/static/game/9d3q7e1l/cover.png?v=6e896f7">
+
+              <h2 id = 'headSeven'>Stardew Valley</h2>
+
+              <p id = 'contentSeven'>Stardew Valley is a lovely valley where you grow crops, raise animals, and singlehandedly decide the economy of an entire small town.</p>
+
+            </div>
+
+            <div id = 'gameEight' class = 'gameBox'>
+              
+              <img id = 'imgEight' src = "https://www.speedrun.com/static/game/om1mw4d2/cover.png?v=c906112">
+
+              <h2 id = 'headEight'>Portal</h2>
+
+              <p id = 'contentEight'>Cave Johnson here: Portal is an awesome game. Lab boys cooked it up few year ago and I gotta tell ya: it slaps. Cave Johnson: we're done here.</p>
+              
+            </div>
+          
+          </div>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+    </div>
+
+
+
+  
   </body>
 </html>

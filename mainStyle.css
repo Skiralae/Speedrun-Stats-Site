@@ -1,0 +1,99 @@
+body {
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: red;
+}
+
+#pageContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+#sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    background-color: purple;
+}
+#sidebar div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: darkgreen;
+
+    margin: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+    border: 3px solid black;
+
+    /*turn into button*/
+    cursor: pointer;
+}
+/*turn into button*/
+#sidebar div:hover {
+    background-color: green;
+}
+#sidebar div.p {
+    font-size: larger;
+    text-align: center;
+}
+
+#mainDiv {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 85%;
+    flex-grow: 1;
+
+}
+#mainDivTop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-size: larger;
+    text-align: center;
+
+    background-color: yellow;
+    border-bottom: 2px solid black;
+    border-left: 4px solid black;
+    border-right: 4px solid black;
+}
+#mainDivBottom {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+}
+.gameSections {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+
+    background-color: orange;
+}
+.gameBox {
+    flex: 1;
+
+    padding: 2px;
+    background-color: orchid;
+    border: 2px solid black;
+
+    text-align: center;
+}
+#gameOne, #gameFive {
+    border-left: 4px solid black;
+}
+#gameFour, #gameEight {
+    border-right: 4px solid black;
+}
+
+
+img {
+    max-width: 200px;
+    max-height: 200px;
+    object-fit : cover;
+    object-position: center;
+}

@@ -1,0 +1,29 @@
+IDS FIRST
+
+Main page: 'pageContainer'
+    
+    Sidebar: 'sidebar'
+        Option buttons: 'o1' - 'o11'
+
+    Rest of the page: 'mainDiv'
+        Title bar: 'mainDivTop'
+            Actual title: 'title'
+        
+        Rest of the page: 'mainDivBottom'
+            Top row: 'secondDivTop'
+                Boxes to display games 1-4: 'gameOne' - 'gameFour'
+                    Images of games: 'imgOne' - 'imgFour'
+                    Headers for games: 'headOne' - 'headFour'
+                    Text for whatever goes along with the game: 'contentOne' - 'contentFour'
+            Lower row: 'secondDivBottom'
+                Boxes to display games 5-8: 'gameFive' - gameEight'
+                    Images of games: 'imgFive' - 'imgEight'
+                    Headers for games: 'headFive' - 'headEight'
+                    Text for whatever goes along with the game: 'contentFive' - 'contentEight'
+
+
+CLASSES
+
+Option buttons (along sidebar): 'optionButton'
+Both rows of games: 'gameSections'
+Individual boxes to display games: 'gameBox'
